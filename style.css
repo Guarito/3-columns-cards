@@ -1,0 +1,108 @@
+/* The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+
+:root {
+    /*Colors*/
+    /*------Primary*/
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    /*------Neutral*/
+    --LightWhite: hsla(0, 0%, 100%, 0.75); /*paragrapghs*/
+    --LightGrey: hsl(0, 0%, 95%); /*background, heading, buttons*/
+    /*End colors*/
+    /*Typography*/
+    --font-lexend-deca: "Lexend Deca", sans-serif;
+    --font-big-shoulders: "Big Shoulders Display", cursive;
+    /*End typography*/
+    --CardBorder: 1rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/*Globales*/
+body {
+    font-family: var(--font-lexend-deca);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: var(--LightGrey);
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Layout */
+.container {
+    margin: 0 auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.card {
+    padding: 4rem;
+    background-color: blue;
+}
+.card:first-of-type {
+    border-radius: var(--CardBorder) var(--CardBorder) 0 0;
+}
+.card:last-of-type {
+    border-radius: 0 0 var(--CardBorder) var(--CardBorder);
+}
+
+.card.card__sedan {
+    background-color: var(--BrightOrange);
+}
+.card.card__suv {
+    background-color: var(--DarkCyan);
+}
+.card.card__luxury {
+    background-color: var(--VeryDarkCyan);
+}
+
+.card .card__title {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: var(--font-big-shoulders);
+    color: var(--LightGrey);
+}
+.card .card__paragraph {
+    color: var(--LightWhite);
+}
+.card .card__button {
+    border: none;
+    border: 0.3rem solid var(--LightGrey);
+    padding: 1.2rem 2.7rem;
+    border-radius: 5rem;
+    background-color: var(--LightGrey);
+    font-weight: 700;
+}
+.card__button--sedan {
+    color: var(--BrightOrange);
+}
+.card__button--suv {
+    color: var(--DarkCyan);
+}
+.card__button--luxury {
+    color: var(--VeryDarkCyan);
+}
+
+.card .card__button:hover {
+    background-color: transparent;
+    color: var(--LightGrey);
+}
