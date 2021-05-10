@@ -55,7 +55,8 @@ body {
 
 .card {
     padding: 4rem;
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
 }
 .card:first-of-type {
     border-radius: var(--CardBorder) var(--CardBorder) 0 0;
@@ -73,10 +74,14 @@ body {
 .card.card__luxury {
     background-color: var(--VeryDarkCyan);
 }
+.card .card__icon {
+    max-width: fit-content;
+}
 
 .card .card__title {
     font-size: 3.2rem;
     text-transform: uppercase;
+    margin: 2rem 0;
     font-weight: 700;
     font-family: var(--font-big-shoulders);
     color: var(--LightGrey);
@@ -87,10 +92,11 @@ body {
 .card .card__button {
     border: none;
     border: 0.3rem solid var(--LightGrey);
-    padding: 1.2rem 2.7rem;
+    padding: 1rem 2rem;
     border-radius: 5rem;
     background-color: var(--LightGrey);
     font-weight: 700;
+    width: fit-content;
 }
 .card__button--sedan {
     color: var(--BrightOrange);
@@ -119,16 +125,11 @@ body {
     .card:last-of-type {
         border-radius: 0 var(--CardBorder) var(--CardBorder) 0;
     }
-    .card {
-        position: relative;
-        height: calc(100% + 15rem);
+    .card .card__paragraph {
+        margin-bottom: 6rem;
+        flex-grow: 1;
     }
-    .card .card__button {
-        position: absolute;
-        /* bottom: 5rem; */
-        bottom: 0;
-        transform: translateY(-100%);
-    }
+
     .attribution {
         grid-column: 2/3;
     }
