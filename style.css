@@ -106,3 +106,30 @@ body {
     background-color: transparent;
     color: var(--LightGrey);
 }
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10rem 1rem;
+    }
+
+    .card:first-of-type {
+        border-radius: var(--CardBorder) 0 0 var(--CardBorder);
+    }
+    .card:last-of-type {
+        border-radius: 0 var(--CardBorder) var(--CardBorder) 0;
+    }
+    .card {
+        position: relative;
+        height: calc(100% + 15rem);
+    }
+    .card .card__button {
+        position: absolute;
+        /* bottom: 5rem; */
+        bottom: 0;
+        transform: translateY(-100%);
+    }
+    .attribution {
+        grid-column: 2/3;
+    }
+}
