@@ -49,6 +49,7 @@ body {
 .container {
     margin: 0 auto;
     width: 90%;
+    padding: 10rem 0;
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -75,13 +76,13 @@ body {
     background-color: var(--VeryDarkCyan);
 }
 .card .card__icon {
-    max-width: fit-content;
+    width: max-content;
 }
 
 .card .card__title {
-    font-size: 3.2rem;
+    font-size: 4rem;
     text-transform: uppercase;
-    margin: 2rem 0;
+    margin: 2rem 0 0 0;
     font-weight: 700;
     font-family: var(--font-big-shoulders);
     color: var(--LightGrey);
@@ -92,11 +93,11 @@ body {
 .card .card__button {
     border: none;
     border: 0.3rem solid var(--LightGrey);
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
     border-radius: 5rem;
     background-color: var(--LightGrey);
     font-weight: 700;
-    width: fit-content;
+    width: max-content;
 }
 .card__button--sedan {
     color: var(--BrightOrange);
@@ -115,10 +116,9 @@ body {
 
 @media (min-width: 768px) {
     .container {
+        width: 85%;
         grid-template-columns: repeat(3, 1fr);
-        padding: 10rem 1rem;
     }
-
     .card:first-of-type {
         border-radius: var(--CardBorder) 0 0 var(--CardBorder);
     }
@@ -129,8 +129,22 @@ body {
         margin-bottom: 6rem;
         flex-grow: 1;
     }
-
     .attribution {
         grid-column: 2/3;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 80%;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 75%;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        width: 70%;
     }
 }
